@@ -70,7 +70,7 @@ function showUpdatePopup() {
 
 function redirectToSpecificLink() {
   if (window.location.href.includes("update-url")) {
-    window.location.href = "https://gist.githubusercontent.com/AFRIENDLYHACKER/e2998cbe68fe39bf36f25fe81be7ffba/raw/d18621ded156d855126c511e0d4441af4f387152/Project%2520Zenith%25202.4";
+    window.location.href = "https://raw.githubusercontent.com/AFRIENDLYHACKER/Zenith-Executor/main/Zenith-Executor";
   }
 }
 

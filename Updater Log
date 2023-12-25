@@ -46,7 +46,7 @@ function shouldShowUpdatePopup() {
  */
 function showUpdatePopup() {
   var currentVersion = 2.5;
-  var updateDescription = "Enhanced menu functionality with drag-and-drop capability, introduced Earthquake v3 for improved seismic visualization, and addressed multiple bugs for increased software stability.";
+  var updateDescription = "New Update!: Enhanced menu functionality with drag-and-drop capability, introduced Earthquake v3 for improved seismic visualization, and addressed multiple bugs for increased software stability.";
   var updateURL = "update-url";
 
   var popupContainer = document.createElement('div');

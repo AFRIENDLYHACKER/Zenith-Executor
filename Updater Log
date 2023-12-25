@@ -1,0 +1,80 @@
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
+
+function shouldShowUpdatePopup() {
+  var versionNumber = 2.2;
+  var lastShownVersion = parseFloat(getCookie('lastShownVersion')) || 0;
+
+  return versionNumber > lastShownVersion;
+}
+
+function showUpdatePopup() {
+  var versionNumber = 2.2;
+  var updateDescription = "Update: Added new things.";
+  var updateURL = "update-url";
+
+  var popupContainer = document.createElement('div');
+  popupContainer.className = 'popup';
+  popupContainer.style.position = 'fixed';
+  popupContainer.style.top = '50%';
+  popupContainer.style.left = '50%';
+  popupContainer.style.transform = 'translate(-50%, -50%)';
+  popupContainer.style.backgroundColor = '#fff';
+  popupContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+  popupContainer.style.padding = '20px';
+  popupContainer.style.textAlign = 'center';
+  popupContainer.style.borderRadius = '8px';
+  popupContainer.style.maxWidth = '400px';
+  popupContainer.style.width = '100%';
+  popupContainer.style.fontFamily = 'Arial, sans-serif';
+  popupContainer.style.zIndex = '1000';
+
+  var versionText = document.createElement('p');
+  versionText.innerText = 'Version ' + versionNumber;
+  popupContainer.appendChild(versionText);
+
+  var descriptionText = document.createElement('p');
+  descriptionText.innerText = updateDescription;
+  popupContainer.appendChild(descriptionText);
+
+  var updateLink = document.createElement('a');
+  updateLink.className = 'update-link';
+  updateLink.href = updateURL;
+  updateLink.innerText = 'Update Now';
+  popupContainer.appendChild(document.createElement('br'));
+  popupContainer.appendChild(document.createElement('br'));
+  popupContainer.appendChild(updateLink);
+
+  document.body.appendChild(popupContainer);
+
+  setCookie('lastShownVersion', versionNumber, 365);
+}
+
+function redirectToSpecificLink() {
+  if (window.location.href.includes("update-url")) {
+    window.location.href = "https://gist.githubusercontent.com/AFRIENDLYHACKER/e2998cbe68fe39bf36f25fe81be7ffba/raw/d18621ded156d855126c511e0d4441af4f387152/Project%2520Zenith%25202.4";
+  }
+}
+
+if (shouldShowUpdatePopup()) {
+  showUpdatePopup();
+}
+redirectToSpecificLink();

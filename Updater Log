@@ -104,7 +104,7 @@ popupContainer.appendChild(updateLink);
 
 // Add a short message for users seeing the popup again
 var reloadMessage = document.createElement('p');
-reloadMessage.innerText = 'If you are seeing this again, kindly reload(shown to ensure you've seen the update.';
+reloadMessage.innerText = "If you are seeing this again, kindly reload(shown to ensure you've seen the update.)";
 reloadMessage.style.fontSize = '14px'; // Adjust font size as needed
 popupContainer.appendChild(reloadMessage);
 

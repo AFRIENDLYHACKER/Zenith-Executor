@@ -64,7 +64,7 @@ popupContainer.style.maxWidth = '600px';
 popupContainer.style.width = '80%';
 popupContainer.style.fontFamily = 'Poppins, sans-serif';
 popupContainer.style.zIndex = '1000';
-document.querySelector("body > div:nth-child(12) > a").style.color = 'black";
+document.querySelector("body > div:nth-child(12) > a").style.color = 'black';
 
   var versionText = document.createElement('p');
   versionText.innerText = 'Version ' + currentVersion;

@@ -98,8 +98,6 @@ popupContainer.style.zIndex = '9999999';
   updateLink.className = 'update-link';
   updateLink.href = updateURL;
   updateLink.innerText = 'Update Now';
-  var linkelement = document.querySelector(".update-link");
-  linkelement.style.color = 'black';
   popupContainer.appendChild(document.createElement('br'));
   popupContainer.appendChild(document.createElement('br'));
   popupContainer.appendChild(updateLink);
@@ -121,6 +119,8 @@ function redirectToSpecificLink() {
 // Display the update popup if applicable
 if (shouldShowUpdatePopup()) {
   showUpdatePopup();
+  var linkelement = document.querySelector(".update-link");
+  linkelement.style.color = 'black';
 }
 
 // Check and perform redirection

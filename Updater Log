@@ -1,3 +1,9 @@
+/**
+ * Sets a cookie with the provided name, value, and expiration period.
+ * @param {string} name - The name of the cookie.
+ * @param {string} value - The value to be stored in the cookie.
+ * @param {number} days - The number of days until the cookie expires.
+ */
 function setCookie(name, value, days) {
   var expires = "";
   if (days) {
@@ -8,6 +14,11 @@ function setCookie(name, value, days) {
   document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
+/**
+ * Retrieves the value of a cookie by its name.
+ * @param {string} name - The name of the cookie.
+ * @returns {string|null} - The value of the cookie or null if not found.
+ */
 function getCookie(name) {
   var nameEQ = name + "=";
   var ca = document.cookie.split(';');
@@ -19,16 +30,23 @@ function getCookie(name) {
   return null;
 }
 
+/**
+ * Determines whether the update popup should be displayed based on the current and stored version numbers.
+ * @returns {boolean} - True if the update popup should be displayed, false otherwise.
+ */
 function shouldShowUpdatePopup() {
-  var versionNumber = 2.2;
+  var currentVersion = 2.5;
   var lastShownVersion = parseFloat(getCookie('lastShownVersion')) || 0;
 
-  return versionNumber > lastShownVersion;
+  return currentVersion > lastShownVersion;
 }
 
+/**
+ * Displays a professionally styled update popup with version information and an update link.
+ */
 function showUpdatePopup() {
-  var versionNumber = 2.2;
-  var updateDescription = "Update: Added new things.";
+  var currentVersion = 2.5;
+  var updateDescription = "Enhanced menu functionality with drag-and-drop capability, introduced Earthquake v3 for improved seismic visualization, and addressed multiple bugs for increased software stability.";
   var updateURL = "update-url";
 
   var popupContainer = document.createElement('div');
@@ -39,16 +57,17 @@ function showUpdatePopup() {
   popupContainer.style.transform = 'translate(-50%, -50%)';
   popupContainer.style.backgroundColor = '#fff';
   popupContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
+  popupContainer.style.border = '1px solid #000'; // Black border
   popupContainer.style.padding = '20px';
   popupContainer.style.textAlign = 'center';
   popupContainer.style.borderRadius = '8px';
   popupContainer.style.maxWidth = '400px';
   popupContainer.style.width = '100%';
   popupContainer.style.fontFamily = 'Arial, sans-serif';
-  popupContainer.style.zIndex = '1000';
+  popupContainer.style.zIndex = '999999';
 
   var versionText = document.createElement('p');
-  versionText.innerText = 'Version ' + versionNumber;
+  versionText.innerText = 'Version ' + currentVersion;
   popupContainer.appendChild(versionText);
 
   var descriptionText = document.createElement('p');
@@ -65,16 +84,23 @@ function showUpdatePopup() {
 
   document.body.appendChild(popupContainer);
 
-  setCookie('lastShownVersion', versionNumber, 365);
+  setCookie('lastShownVersion', currentVersion, 365);
 }
 
+/**
+ * Redirects the user to a specific link if the current URL contains the designated keyword.
+ */
 function redirectToSpecificLink() {
   if (window.location.href.includes("update-url")) {
-    window.location.href = "https://raw.githubusercontent.com/AFRIENDLYHACKER/Zenith-Executor/main/Zenith-Executor";
+    window.location.href = "specific-link.html";
   }
 }
 
+// Display the update popup if applicable
 if (shouldShowUpdatePopup()) {
   showUpdatePopup();
 }
+
+// Check and perform redirection
 redirectToSpecificLink();
+// this should answer all questions nothing bad will happen

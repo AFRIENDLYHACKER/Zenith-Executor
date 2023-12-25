@@ -55,30 +55,32 @@ popupContainer.style.top = '50%';
 popupContainer.style.left = '50%';
 popupContainer.style.transform = 'translate(-50%, -50%)';
 
-// Stylish background and text colors
-popupContainer.style.backgroundColor = '#2c3e50'; // Dark background color
-popupContainer.style.color = '#ecf0f1'; // Light text color
+// Stylish gradient background
+popupContainer.style.background = 'linear-gradient(45deg, #3498db, #9b59b6)';
+
+// White text color
+popupContainer.style.color = '#ffffff';
 
 // Add a subtle box shadow for depth
-popupContainer.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+popupContainer.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
 
 // Padding for content inside the popup
-popupContainer.style.padding = '20px';
+popupContainer.style.padding = '40px';
 
 // Center text content
 popupContainer.style.textAlign = 'center';
 
 // Rounded corners for a modern look
-popupContainer.style.borderRadius = '10px';
+popupContainer.style.borderRadius = '20px';
 
 // Set maximum width for better readability
-popupContainer.style.maxWidth = '400px';
+popupContainer.style.maxWidth = '600px';
 
 // Make the popup responsive by using percentage width
 popupContainer.style.width = '80%';
 
 // Choose a more modern font
-popupContainer.style.fontFamily = 'Roboto, sans-serif';
+popupContainer.style.fontFamily = 'Poppins, sans-serif';
 
 // Increase z-index for layering above other elements
 popupContainer.style.zIndex = '1000';

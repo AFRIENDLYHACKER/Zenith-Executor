@@ -46,7 +46,7 @@ function shouldShowUpdatePopup() {
  */
 function showUpdatePopup() {
   var currentVersion = 2.5;
-  var updateDescription = "New Update!: Enhanced menu functionality with drag-and-drop capability, introduced Earthquake v3 for improved seismic visualization, and addressed multiple bugs for increased software stability.";
+  var updateDescription = "New Update!:Enhanced menu functionality with drag-and-drop capability, introduced Earthquake v3 for improved seismic visualization, and addressed multiple bugs for increased software stability.";
   var updateURL = "update-url";
 
   var popupContainer = document.createElement('div');
@@ -57,14 +57,13 @@ function showUpdatePopup() {
   popupContainer.style.transform = 'translate(-50%, -50%)';
   popupContainer.style.backgroundColor = '#fff';
   popupContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
-  popupContainer.style.border = '1px solid #000'; // Black border
   popupContainer.style.padding = '20px';
   popupContainer.style.textAlign = 'center';
   popupContainer.style.borderRadius = '8px';
   popupContainer.style.maxWidth = '400px';
   popupContainer.style.width = '100%';
   popupContainer.style.fontFamily = 'Arial, sans-serif';
-  popupContainer.style.zIndex = '999999';
+  popupContainer.style.zIndex = '1000';
 
   var versionText = document.createElement('p');
   versionText.innerText = 'Version ' + currentVersion;
@@ -92,7 +91,7 @@ function showUpdatePopup() {
  */
 function redirectToSpecificLink() {
   if (window.location.href.includes("update-url")) {
-    window.location.href = "specific-link.html";
+    window.location.href = "https://raw.githubusercontent.com/AFRIENDLYHACKER/Zenith-Executor/main/Zenith-Executor";
   }
 }
 

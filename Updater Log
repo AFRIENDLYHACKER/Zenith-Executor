@@ -50,21 +50,38 @@ function showUpdatePopup() {
   var updateURL = "update-url";
 
   var popupContainer = document.createElement('div');
-  popupContainer.className = 'popup';
-  popupContainer.style.position = 'fixed';
-  popupContainer.style.top = '50%';
-  popupContainer.style.left = '50%';
-  popupContainer.style.transform = 'translate(-50%, -50%)';
-  popupContainer.style.backgroundColor = '#34495e';
-  popupContainer.style.color = 'white';
-  popupContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
-  popupContainer.style.padding = '20px';
-  popupContainer.style.textAlign = 'center';
-  popupContainer.style.borderRadius = '8px';
-  popupContainer.style.maxWidth = '400px';
-  popupContainer.style.width = '100%';
-  popupContainer.style.fontFamily = 'Arial, sans-serif';
-  popupContainer.style.zIndex = '99999999999999999';
+popupContainer.style.position = 'fixed';
+popupContainer.style.top = '50%';
+popupContainer.style.left = '50%';
+popupContainer.style.transform = 'translate(-50%, -50%)';
+
+// Stylish background and text colors
+popupContainer.style.backgroundColor = '#2c3e50'; // Dark background color
+popupContainer.style.color = '#ecf0f1'; // Light text color
+
+// Add a subtle box shadow for depth
+popupContainer.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+
+// Padding for content inside the popup
+popupContainer.style.padding = '20px';
+
+// Center text content
+popupContainer.style.textAlign = 'center';
+
+// Rounded corners for a modern look
+popupContainer.style.borderRadius = '10px';
+
+// Set maximum width for better readability
+popupContainer.style.maxWidth = '400px';
+
+// Make the popup responsive by using percentage width
+popupContainer.style.width = '80%';
+
+// Choose a more modern font
+popupContainer.style.fontFamily = 'Roboto, sans-serif';
+
+// Increase z-index for layering above other elements
+popupContainer.style.zIndex = '1000';
 
   var versionText = document.createElement('p');
   versionText.innerText = 'Version ' + currentVersion;

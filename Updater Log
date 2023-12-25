@@ -85,6 +85,7 @@ popupContainer.style.fontFamily = 'Poppins, sans-serif';
 
 // Increase z-index for layering above other elements
 popupContainer.style.zIndex = '9999999';
+popupContainer.style.fontWeight = 'bold';
 
   var versionText = document.createElement('p');
   versionText.innerText = 'Version ' + currentVersion;

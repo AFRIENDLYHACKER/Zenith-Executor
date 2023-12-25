@@ -105,8 +105,8 @@ popupContainer.appendChild(updateLink);
 
 // Add a short message for users seeing the popup again
 var reloadMessage = document.createElement('p');
-reloadMessage.innerText = "If you are seeing this again, kindly reload...update hasn't been evaluated properly(re-loading scripts and ensuring universal running).";
-reloadMessage.style.fontSize = '11px'; // Adjust font size as needed
+reloadMessage.innerText = "If you see this again, please reload. The update may not have been evaluated correctly(re-loading scripts and ensuring universal injection).";
+reloadMessage.style.fontSize = '8px'; // Adjust font size as needed
 popupContainer.appendChild(reloadMessage);
 
 document.body.appendChild(popupContainer);

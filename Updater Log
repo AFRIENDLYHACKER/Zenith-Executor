@@ -84,7 +84,7 @@ popupContainer.style.width = '80%';
 popupContainer.style.fontFamily = 'Poppins, sans-serif';
 
 // Increase z-index for layering above other elements
-popupContainer.style.zIndex = '1000';
+popupContainer.style.zIndex = '9999999';
 
   var versionText = document.createElement('p');
   versionText.innerText = 'Version ' + currentVersion;
@@ -98,7 +98,8 @@ popupContainer.style.zIndex = '1000';
   updateLink.className = 'update-link';
   updateLink.href = updateURL;
   updateLink.innerText = 'Update Now';
-  updateLink.style.color = 'black';
+  var linkelement = document.querySelector(".update-link");
+  linkelement.style.color = 'black';
   popupContainer.appendChild(document.createElement('br'));
   popupContainer.appendChild(document.createElement('br'));
   popupContainer.appendChild(updateLink);

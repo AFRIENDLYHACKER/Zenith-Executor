@@ -50,7 +50,6 @@ function showUpdatePopup() {
   var updateURL = "update-url";
 
 var popupContainer = document.createElement('div');
-var linkelement = document.querySelector(".update-link");
 // Center the popup both horizontally and vertically
 popupContainer.style.position = 'fixed';
 popupContainer.style.top = '50%';
@@ -87,7 +86,6 @@ popupContainer.style.fontFamily = 'Poppins, sans-serif';
 // Increase z-index for layering above other elements
 popupContainer.style.zIndex = '1000';
 
-linkelement.style.color = 'black';
   var versionText = document.createElement('p');
   versionText.innerText = 'Version ' + currentVersion;
   popupContainer.appendChild(versionText);
@@ -100,6 +98,7 @@ linkelement.style.color = 'black';
   updateLink.className = 'update-link';
   updateLink.href = updateURL;
   updateLink.innerText = 'Update Now';
+  updateLink.style.color = 'black';
   popupContainer.appendChild(document.createElement('br'));
   popupContainer.appendChild(document.createElement('br'));
   popupContainer.appendChild(updateLink);

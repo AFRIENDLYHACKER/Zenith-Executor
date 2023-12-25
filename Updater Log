@@ -63,7 +63,7 @@ function showUpdatePopup() {
   popupContainer.style.maxWidth = '400px';
   popupContainer.style.width = '100%';
   popupContainer.style.fontFamily = 'Arial, sans-serif';
-  popupContainer.style.zIndex = '1000';
+  popupContainer.style.zIndex = '99999999999999999';
 
   var versionText = document.createElement('p');
   versionText.innerText = 'Version ' + currentVersion;

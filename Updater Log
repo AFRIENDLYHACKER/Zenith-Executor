@@ -55,7 +55,8 @@ function showUpdatePopup() {
   popupContainer.style.top = '50%';
   popupContainer.style.left = '50%';
   popupContainer.style.transform = 'translate(-50%, -50%)';
-  popupContainer.style.backgroundColor = '#fff';
+  popupContainer.style.backgroundColor = '#34495e';
+  popupContainer.style.color = 'white';
   popupContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
   popupContainer.style.padding = '20px';
   popupContainer.style.textAlign = 'center';

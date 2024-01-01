@@ -35,7 +35,7 @@ function getCookie(name) {
  * @returns {boolean} - True if the update popup should be displayed, false otherwise.
  */
 function shouldShowUpdatePopup() {
-  var currentVersion = 2.5;
+  var currentVersion = 2.7;
   var lastShownVersion = parseFloat(getCookie('lastShownVersion')) || 0;
 
   return currentVersion > lastShownVersion;
@@ -45,7 +45,7 @@ function shouldShowUpdatePopup() {
  * Displays a professionally styled update popup with version information and an update link.
  */
 function showUpdatePopup() {
-  var currentVersion = 2.5;
+  var currentVersion = 2.7;
   var updateDescription = "New Update!: Enhanced menu functionality with drag-and-drop capability, introduced Earthquake v3 for improved seismic visualization, and addressed multiple bugs for increased software stability.";
   var updateURL = "update-url";
 

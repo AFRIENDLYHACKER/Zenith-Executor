@@ -46,7 +46,7 @@ function shouldShowUpdatePopup() {
  */
 function showUpdatePopup() {
   var currentVersion = 2.7;
-  var updateDescription = "New Update!: Enhanced menu functionality with drag-and-drop capability, introduced Earthquake v3 for improved seismic visualization, and addressed multiple bugs for increased software stability.";
+  var updateDescription = "New Update!: Now supports more pages and include other features.";
   var updateURL = "update-url";
 
 var popupContainer = document.createElement('div');

@@ -35,7 +35,7 @@ function getCookie(name) {
  * @returns {boolean} - True if the update popup should be displayed, false otherwise.
  */
 function shouldShowUpdatePopup() {
-  var currentVersion = 2.9;
+  var currentVersion = 3.0;
   var lastShownVersion = parseFloat(getCookie('lastShownVersion')) || 0;
 
   return currentVersion > lastShownVersion;
@@ -45,7 +45,7 @@ function shouldShowUpdatePopup() {
  * Displays a professionally styled update popup with version information and an update link.
  */
 function showUpdatePopup() {
-  var currentVersion = 2.9;
+  var currentVersion = 3.0;
   var updateDescription = "New Update!: Improved menu design further and added a script(one script only), Menu is now fully compatiable with phones";
   var updateURL = "update-url";
 
